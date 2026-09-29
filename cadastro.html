@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+ 
+<header>
+ 
+    <div class="logo">
+        <div class="logo-icon">🌸</div>
+ 
+        <h1>
+            <span>Sakura</span> Sushi
+        </h1>
+    </div>
+ 
+    <nav>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="carrinho.html">Carrinho</a></li>
+            <li><a href="promocoes.html">Promoções</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+ 
+</header>
+ 
+   
+ 
+        
+    
+ 
+    <!-- CONTEÚDO -->
+    <main class="main">
+ 
+        <section class="cadastro-area">
+ 
+ 
+            <!-- LOGO CENTRAL -->
+ 
+            <div class="brand-center">
+ 
+                <div class="center-logo">
+                    <span>🌸</span>
+                </div>
+ 
+                <span class="center-logo-text">
+                    Sakura Sushi
+                </span>
+ 
+            </div>
+ 
+ 
+            <h2>
+                Crie a Sua Conta!
+            </h2>
+ 
+ 
+            <!-- FORMULÁRIO -->
+ 
+            <div class="form-wrapper">
+ 
+                <h1>
+                    Cadastro
+                </h1>
+ 
+ 
+                <form>
+ 
+ 
+                    <!-- NOME -->
+ 
+                    <div class="form-group">
+ 
+                        <label for="nome">
+                            Nome
+                        </label>
+ 
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Nome"
+                        >
+ 
+                    </div>
+ 
+ 
+                    <!-- EMAIL -->
+ 
+                    <div class="form-group">
+ 
+                        <label for="email">
+                            Email
+                        </label>
+ 
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email"
+                        >
+ 
+                    </div>
+ 
+ 
+                    <!-- SENHA -->
+ 
+                    <div class="form-group">
+ 
+                        <label for="senha">
+                            Senha
+                        </label>
+ 
+                        <div class="password-input">
+ 
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Senha"
+                            >
+ 
+                            <button
+                                type="button"
+                                class="eye-button"
+                                onclick="togglePassword('senha', this)"
+                            >
+ 
+                                <svg viewBox="0 0 24 24">
+ 
+                                    <path
+                                        d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"
+                                    ></path>
+ 
+                                    <circle
+                                        cx="12"
+                                        cy="12"
+                                        r="2.5"
+                                    ></circle>
+ 
+                                    <line
+                                        x1="4"
+                                        y1="4"
+                                        x2="20"
+                                        y2="20"
+                                    ></line>
+ 
+                                </svg>
+ 
+                            </button>
+ 
+                        </div>
+ 
+                    </div>
+ 
+ 
+                    <!-- CONFIRMAR SENHA -->
+ 
+                    <div class="form-group">
+ 
+                        <label for="confirmar">
+                            Confirmar Senha
+                        </label>
+ 
+                        <input
+                            type="password"
+                            id="confirmar"
+                            name="confirmar"
+                            placeholder="Confirmar Senha"
+                        >
+ 
+                    </div>
+ 
+ 
+                    <!-- BOTÃO -->
+ 
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+                        Cadastrar
+                    </button>
+ 
+ 
+                </form>
+ 
+            </div>
+ 
+        </section>
+ 
+    </main>
+ 
+ 
+    <script>
+ 
+        function togglePassword(id, button) {
+ 
+            const input = document.getElementById(id);
+ 
+            if (input.type === "password") {
+ 
+                input.type = "text";
+ 
+            } else {
+ 
+                input.type = "password";
+ 
+            }
+ 
+        }
+ 
+    </script>
+ 
+</body>
+ 
+</html>
+ 
