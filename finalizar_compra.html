@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Finalizar Pedido - Sakura Sushi</title>
+ 
+    <!-- CSS geral do site -->
+    <link rel="stylesheet" href="style.css">
+ 
+    <!-- CSS somente desta página -->
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+ 
+    <!-- MENU -->
+    <header>
+ 
+        <div class="logo">
+            <div class="logo-icon">🌸</div>
+ 
+            <h1>
+                Sakura<span>Sushi</span>
+            </h1>
+        </div>
+ 
+        <nav>
+            <ul>
+                <li><a href="index.html">Menu</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="promocoes.html">Promoções</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+ 
+    </header>
+ 
+ 
+    <!-- PÁGINA -->
+    <main class="pagina-finalizar">
+ 
+        <!-- TÍTULO -->
+        <h1 class="titulo-finalizar">
+            Finalizar Pedido
+        </h1>
+ 
+ 
+        <div class="conteudo-finalizar">
+ 
+            <!-- =====================================
+                 COLUNA ESQUERDA
+            ====================================== -->
+ 
+            <div class="coluna-esquerda">
+ 
+ 
+                <!-- =====================================
+                     1 - DADOS DA ENTREGA
+                ====================================== -->
+ 
+                <section class="secao-entrega">
+ 
+                    <h2>
+                        1- Dados da Entrega
+                    </h2>
+ 
+ 
+                    <div class="caixa-entrega">
+ 
+ 
+                        <!-- CEP -->
+                        <div class="linha-formulario">
+ 
+                            <div class="campo cep">
+ 
+                                <label for="cep">
+                                    CEP
+                                </label>
+ 
+                                <input
+                                    type="text"
+                                    id="cep"
+                                    placeholder="CEP"
+                                    maxlength="9"
+                                    oninput="formatarCEP(this)"
+                                >
+ 
+                            </div>
+ 
+ 
+                            <button
+                                type="button"
+                                class="botao-cep"
+                                onclick="buscarCEP()"
+                            >
+                                Buscar CEP
+                            </button>
+ 
+                        </div>
+ 
+ 
+                        <!-- RUA E NÚMERO -->
+                        <div class="linha-formulario">
+ 
+                            <div class="campo rua">
+ 
+                                <label for="rua">
+                                    Rua
+                                </label>
+ 
+                                <input
+                                    type="text"
+                                    id="rua"
+                                    placeholder="Rua"
+                                >
+ 
+                            </div>
+ 
+ 
+                            <div class="campo numero">
+ 
+                                <label for="numero">
+                                    Número
+                                </label>
+ 
+                                <input
+                                    type="text"
+                                    id="numero"
+                                    placeholder="Número"
+                                >
+ 
+                            </div>
+ 
+                        </div>
+ 
+ 
+                        <!-- BAIRRO E CIDADE -->
+                        <div class="linha-formulario">
+ 
+                            <div class="campo bairro">
+ 
+                                <label for="bairro">
+                                    Bairro
+                                </label>
+ 
+                                <input
+                                    type="text"
+                                    id="bairro"
+                                    placeholder="Bairro"
+                                >
+ 
+                            </div>
+ 
+ 
+                            <div class="campo cidade">
+ 
+                                <label for="cidade">
+                                    Cidade
+                                </label>
+ 
+                                <input
+                                    type="text"
+                                    id="cidade"
+                                    placeholder="Cidade"
+                                >
+ 
+                            </div>
+ 
+                        </div>
+ 
+ 
+                        <!-- ESTADO E COMPLEMENTO -->
+                        <div class="linha-formulario">
+ 
+                            <div class="campo estado">
+ 
+                                <label for="estado">
+                                    Estado
+                                </label>
+ 
+                                <input
+                                    type="text"
+                                    id="estado"
+                                    placeholder="Estado"
+                                >
+ 
+                            </div>
+ 
+ 
+                            <div class="campo complemento">
+ 
+                                <label for="complemento">
+                                    Complemento (Opcional)
+                                </label>
+ 
+                                <input
+                                    type="text"
+                                    id="complemento"
+                                    placeholder="Ex: Casa, apartamento etc."
+                                >
+ 
+                            </div>
+ 
+                        </div>
+ 
+ 
+                        <!-- NOME E TELEFONE -->
+                        <div class="linha-formulario">
+ 
+                            <div class="campo nome">
+ 
+                                <label for="nome">
+                                    Nome Completo
+                                </label>
+ 
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    placeholder="Nome"
+                                >
+ 
+                            </div>
+ 
+ 
+                            <div class="campo telefone">
+ 
+                                <label for="telefone">
+                                    Telefone
+                                </label>
+ 
+                                <input
+                                    type="text"
+                                    id="telefone"
+                                    placeholder="(99) 9999-9999"
+                                >
+ 
+                            </div>
+ 
+                        </div>
+ 
+ 
+                        <!-- INFORMAÇÕES DA ENTREGA -->
+                        <div class="informacoes-entrega">
+ 
+ 
+                            <div class="tempo-entrega">
+ 
+                                <span class="icone-entrega">
+                                    ◷
+                                </span>
+ 
+                                <div>
+ 
+                                    <small>
+                                        Tempo estimado de entrega
+                                    </small>
+ 
+                                    <strong>
+                                        35 – 50 minutos
+                                    </strong>
+ 
+                                </div>
+ 
+                            </div>
+ 
+ 
+                            <div class="taxa-entrega">
+ 
+                                <span class="icone-moto">
+                                    🏍
+                                </span>
+ 
+                                <div>
+ 
+                                    <small>
+                                        Taxa de entrega
+                                    </small>
+ 
+                                    <strong>
+                                        R$ 8,00
+                                    </strong>
+ 
+                                </div>
+ 
+                            </div>
+ 
+ 
+                        </div>
+ 
+                    </div>
+ 
+                </section>
+ 
+ 
+ 
+                <!-- =====================================
+                     2 - FORMA DE PAGAMENTO
+                ====================================== -->
+ 
+                <section class="secao-pagamento">
+ 
+                    <h2>
+                        2- Forma de Pagamento
+                    </h2>
+ 
+ 
+                    <div class="caixa-pagamento">
+ 
+ 
+                        <div class="opcoes-pagamento">
+ 
+ 
+                            <button
+                                type="button"
+                                class="pagamento pix"
+                            >
+ 
+                                <span>
+                                    ◆
+                                </span>
+ 
+                                <strong>
+                                    pix
+                                </strong>
+ 
+                            </button>
+ 
+ 
+                            <button
+                                type="button"
+                                class="pagamento dinheiro"
+                            >
+ 
+                                <span>
+                                    ▤
+                                </span>
+ 
+                                <strong>
+                                    Dinheiro
+                                </strong>
+ 
+                            </button>
+ 
+ 
+                            <button
+                                type="button"
+                                class="pagamento boleto"
+                            >
+ 
+                                <span>
+                                    ▥
+                                </span>
+ 
+                                <strong>
+                                    Boleto<br>
+                                    Bancário
+                                </strong>
+ 
+                            </button>
+ 
+ 
+                            <button
+                                type="button"
+                                class="pagamento cartao"
+                            >
+ 
+                                <strong>
+                                    VISA
+                                </strong>
+ 
+                                <strong>
+                                    ● ●
+                                </strong>
+ 
+                                <strong>
+                                    elo
+                                </strong>
+ 
+                            </button>
+ 
+ 
+                        </div>
+ 
+ 
+                        <select
+                            class="select-pagamento"
+                            id="formaPagamento"
+                        >
+ 
+                            <option value="">
+                                Escolha uma forma de Pagamento
+                            </option>
+ 
+                            <option value="pix">
+                                PIX
+                            </option>
+ 
+                            <option value="dinheiro">
+                                Dinheiro
+                            </option>
+ 
+                            <option value="boleto">
+                                Boleto Bancário
+                            </option>
+ 
+                            <option value="cartao">
+                                Cartão
+                            </option>
+ 
+                        </select>
+ 
+                    </div>
+ 
+                </section>
+ 
+ 
+ 
+                <!-- =====================================
+                     3 - OBSERVAÇÕES
+                ====================================== -->
+ 
+                <section class="secao-observacoes">
+ 
+                    <h2>
+                        3- Observações do Pedido
+                    </h2>
+ 
+ 
+                    <textarea
+                        placeholder="Ex: Sem isso, sem aquilo, etc..."
+                    ></textarea>
+ 
+                </section>
+ 
+            </div>
+ 
+ 
+ 
+            <!-- =====================================
+                 COLUNA DIREITA
+            ====================================== -->
+ 
+            <div class="coluna-direita">
+ 
+ 
+                <!-- RESUMO DO PEDIDO -->
+                <section class="resumo-pedido">
+ 
+                    <h2>
+                        4- Resumo do Pedido
+                    </h2>
+ 
+ 
+                    <div class="caixa-resumo">
+ 
+ 
+                        <div class="titulo-carrinho">
+ 
+                            <strong>
+                                Meu Carrinho
+                            </strong>
+ 
+                        </div>
+ 
+ 
+                        <div class="linha-resumo"></div>
+ 
+ 
+                        <div class="produto-resumo">
+ 
+ 
+                            <img
+                                src="sushi salmao.png"
+                                alt="Nigiri de Salmão"
+                            >
+ 
+ 
+                            <div class="nome-resumo">
+ 
+                                Nigiri de Salmão - 2 Peças
+ 
+                            </div>
+ 
+ 
+                        </div>
+ 
+                    </div>
+ 
+                </section>
+ 
+            </div>
+ 
+        </div>
+ 
+ 
+ 
+        <!-- BOTÃO FINALIZAR -->
+        <button
+            type="button"
+            class="botao-finalizar"
+            onclick="finalizarCompra()"
+        >
+            Finalizar Compra
+        </button>
+ 
+    </main>
+ 
+ 
+ 
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+ 
+    <script>
+ 
+        /* =====================================
+           FORMATAÇÃO DO CEP
+        ====================================== */
+ 
+        function formatarCEP(campo) {
+ 
+            let cep = campo.value.replace(/\D/g, "");
+ 
+            if (cep.length > 5) {
+                cep = cep.substring(0, 5) + "-" + cep.substring(5, 8);
+            }
+ 
+            campo.value = cep;
+        }
+ 
+ 
+ 
+        /* =====================================
+           BUSCAR CEP
+        ====================================== */
+ 
+        function buscarCEP() {
+ 
+            const campoCEP = document.getElementById("cep");
+ 
+            const cep = campoCEP.value.replace(/\D/g, "");
+ 
+ 
+            // Verifica se o CEP tem 8 números
+            if (cep.length !== 8) {
+ 
+                alert("Digite um CEP válido com 8 números.");
+ 
+                campoCEP.focus();
+ 
+                return;
+            }
+ 
+ 
+            // Mostra que está pesquisando
+            const botao = document.querySelector(".botao-cep");
+ 
+            botao.textContent = "Buscando...";
+            botao.disabled = true;
+ 
+ 
+            // Consulta o ViaCEP
+            fetch("https://viacep.com.br/ws/" + cep + "/json/")
+ 
+                .then(function(response) {
+ 
+                    if (!response.ok) {
+                        throw new Error("Erro na consulta.");
+                    }
+ 
+                    return response.json();
+ 
+                })
+ 
+ 
+                .then(function(dados) {
+ 
+ 
+                    // CEP não encontrado
+                    if (dados.erro) {
+ 
+                        alert("CEP não encontrado.");
+ 
+                        return;
+                    }
+ 
+ 
+                    // Preenche os campos automaticamente
+                    document.getElementById("rua").value =
+                        dados.logradouro || "";
+ 
+                    document.getElementById("bairro").value =
+                        dados.bairro || "";
+ 
+                    document.getElementById("cidade").value =
+                        dados.localidade || "";
+ 
+                    document.getElementById("estado").value =
+                        dados.uf || "";
+ 
+ 
+                })
+ 
+ 
+                .catch(function(erro) {
+ 
+                    console.error(erro);
+ 
+                    alert(
+                        "Não foi possível buscar o CEP. Verifique sua conexão com a internet."
+                    );
+ 
+                })
+ 
+ 
+                .finally(function() {
+ 
+                    botao.textContent = "Buscar CEP";
+ 
+                    botao.disabled = false;
+ 
+                });
+ 
+        }
+ 
+ 
+ 
+        /* =====================================
+           FINALIZAR COMPRA
+        ====================================== */
+ 
+        function finalizarCompra() {
+ 
+            const nome =
+                document.getElementById("nome").value.trim();
+ 
+            const cep =
+                document.getElementById("cep").value.trim();
+ 
+            const rua =
+                document.getElementById("rua").value.trim();
+ 
+            const numero =
+                document.getElementById("numero").value.trim();
+ 
+            const pagamento =
+                document.getElementById("formaPagamento").value;
+ 
+ 
+            if (nome === "") {
+ 
+                alert("Digite seu nome completo.");
+ 
+                document.getElementById("nome").focus();
+ 
+                return;
+            }
+ 
+ 
+            if (cep === "") {
+ 
+                alert("Digite seu CEP.");
+ 
+                document.getElementById("cep").focus();
+ 
+                return;
+            }
+ 
+ 
+            if (rua === "") {
+ 
+                alert("Digite sua rua.");
+ 
+                document.getElementById("rua").focus();
+ 
+                return;
+            }
+ 
+ 
+            if (numero === "") {
+ 
+                alert("Digite o número da residência.");
+ 
+                document.getElementById("numero").focus();
+ 
+                return;
+            }
+ 
+ 
+            if (pagamento === "") {
+ 
+                alert("Escolha uma forma de pagamento.");
+ 
+                document.getElementById("formaPagamento").focus();
+ 
+                return;
+            }
+ 
+ 
+            alert(
+                "Pedido finalizado com sucesso! 🍣🌸"
+            );
+ 
+        }
+ 
+    </script>
+ 
+</body>
+ 
+</html>

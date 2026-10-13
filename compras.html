@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Carrinho - Sakura Sushi</title>
+
+    <!-- CSS principal do site -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS exclusivo do carrinho -->
+    <link rel="stylesheet" href="carrinho.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🌸
+            </div>
+
+            <h1>
+                Sakura<span>Sushi</span>
+            </h1>
+
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Menu</a>
+                </li>
+
+                <li>
+                    <a href="sobre.html">Sobre</a>
+                </li>
+
+                <li>
+                    <a href="reservas.html">Reservas</a>
+                </li>
+
+                <li>
+                    <a href="cardapio.html">Cardápio</a>
+                </li>
+
+                <li>
+                    <a href="carrinho.html">Carrinho</a>
+                </li>
+
+                <li>
+                    <a href="promocoes.html">Promoções</a>
+                </li>
+
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+
+                <li>
+                    <a href="contato.html">Contato</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PÁGINA DO CARRINHO
+         ===================================================== -->
+
+    <main class="pagina-carrinho">
+
+
+        <!-- =================================================
+             CAIXA DO CARRINHO
+             ================================================= -->
+
+        <section class="caixa-carrinho">
+
+
+            <h2>
+                Meu Carrinho
+            </h2>
+
+
+            <div class="linha-carrinho"></div>
+
+
+
+            <!-- =============================================
+                 PRODUTO
+                 ============================================= -->
+
+            <div class="produto-carrinho">
+
+
+                <!-- IMAGEM DO PRODUTO -->
+
+                <img
+                    src="file:///Z:/PRIT/sakura%20html/nigeri%20salmao%20.png"
+                    alt="Nigiri de Salmão"
+                    class="imagem-produto-carrinho"
+                >
+
+
+
+                <!-- NOME DO PRODUTO -->
+
+                <div class="nome-produto-carrinho">
+
+                    <h1>
+                        Nigiri de Salmão - 2 Peças
+                    </h1>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     INFORMAÇÕES DO PRODUTO
+                     ========================================= -->
+
+                <div class="informacoes-produto-carrinho">
+
+
+                    <!-- NOME DA LOJA -->
+
+                    <div class="nome-loja-carrinho">
+
+                        <strong>
+                            Sushi Salmão
+                        </strong>
+
+                        <span>
+                            Sakura Sushi
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         QUANTIDADE
+                         ===================================== -->
+
+                    <div class="controle-carrinho">
+
+
+                        <!-- DIMINUIR -->
+
+                        <button
+                            type="button"
+                            class="botao-quantidade"
+                            onclick="diminuirQuantidade()"
+                        >
+                            −
+                        </button>
+
+
+                        <!-- QUANTIDADE ATUAL -->
+
+                        <span id="quantidade">
+                            1
+                        </span>
+
+
+                        <!-- AUMENTAR -->
+
+                        <button
+                            type="button"
+                            class="botao-quantidade"
+                            onclick="aumentarQuantidade()"
+                        >
+                            +
+                        </button>
+
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         PREÇO
+                         ===================================== -->
+
+                    <strong
+                        class="preco-carrinho"
+                        id="preco"
+                    >
+                        R$ 12,90
+                    </strong>
+
+
+
+                    <!-- =====================================
+                         LIXEIRA
+                         ===================================== -->
+
+                    <button
+                        type="button"
+                        class="botao-lixeira"
+                        onclick="removerProduto()"
+                        title="Remover produto"
+                    >
+                        🗑
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOTÕES
+             ================================================= -->
+
+        <div class="botoes-carrinho">
+
+
+            <!-- VOLTAR PARA O CARDÁPIO -->
+
+            <a
+                href="cardapio.html"
+                class="botao-escolher-produtos"
+            >
+                Escolher mais Produtos
+            </a>
+
+
+
+            <!-- IR PARA FINALIZAÇÃO -->
+
+            <a
+                href="finalizarcompra2.html"
+                class="botao-finalizar-compra"
+            >
+                Finalizar Compra
+            </a>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT DO CARRINHO
+         ===================================================== -->
+
+    <script>
+
+
+        // Quantidade inicial
+
+        let quantidade = 1;
+
+
+        // Preço de uma unidade
+
+        const precoUnitario = 12.90;
+
+
+
+        // ==================================================
+        // ATUALIZAR QUANTIDADE E PREÇO
+        // ==================================================
+
+        function atualizarCarrinho() {
+
+
+            // Atualiza a quantidade mostrada na tela
+
+            document.getElementById("quantidade").textContent = quantidade;
+
+
+
+            // Calcula o preço total
+
+            const total = quantidade * precoUnitario;
+
+
+
+            // Atualiza o preço
+
+            document.getElementById("preco").textContent =
+                "R$ " + total.toFixed(2).replace(".", ",");
+
+
+        }
+
+
+
+        // ==================================================
+        // AUMENTAR QUANTIDADE
+        // ==================================================
+
+        function aumentarQuantidade() {
+
+            quantidade++;
+
+            atualizarCarrinho();
+
+        }
+
+
+
+        // ==================================================
+        // DIMINUIR QUANTIDADE
+        // ==================================================
+
+        function diminuirQuantidade() {
+
+
+            // Não deixa a quantidade ficar menor que 1
+
+            if (quantidade > 1) {
+
+                quantidade--;
+
+                atualizarCarrinho();
+
+            }
+
+        }
+
+
+
+        // ==================================================
+        // REMOVER PRODUTO
+        // ==================================================
+
+        function removerProduto() {
+
+
+            const produto =
+                document.querySelector(".produto-carrinho");
+
+
+            produto.style.display = "none";
+
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

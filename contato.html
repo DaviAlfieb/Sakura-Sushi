@@ -58,197 +58,176 @@
     <!-- PÁGINA DE CONTATO -->
     <main class="contato">
 
-        <h2>
-            Fale Conosco
-        </h2>
+    <h2>
+        Fale Conosco
+    </h2>
 
-<form class="form-contato" action="mensagem-enviada.html"></form>
+    <form class="form-contato" action="mensagem_contato.html">
 
-            <!-- CAMPOS EM DUAS COLUNAS -->
-            <div class="campos-duplos">
+        <!-- CAMPOS EM DUAS COLUNAS -->
+        <div class="campos-duplos">
 
-
-                <!-- NOME -->
-                <div class="campo-contato">
-
-                    <label for="nome">
-                        Nome
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        placeholder="Digite seu Nome"
-                    >
-
-                </div>
-
-
-                <!-- EMAIL -->
-                <div class="campo-contato">
-
-                    <label for="email-contato">
-                        Email
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email-contato"
-                        name="email"
-                        placeholder="Exemplo@exemplo.com.br"
-                    >
-
-                </div>
-
-
-                <!-- TELEFONE -->
-                <div class="campo-contato">
-
-                    <label for="telefone">
-                        Telefone Fixo
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="telefone"
-                        name="telefone"
-                        placeholder="(99) 9999-9999"
-                    >
-
-                </div>
-
-
-                <!-- CELULAR -->
-                <div class="campo-contato">
-
-                    <label for="celular">
-                        Celular
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="celular"
-                        name="celular"
-                        placeholder="(99) 99999-9999"
-                    >
-
-                </div>
-
-
-                <!-- CIDADE -->
-                <div class="campo-contato">
-
-                    <label for="cidade">
-                        Cidade/UF
-                    </label>
-
-                    <input
-                        type="text"
-                        id="cidade"
-                        name="cidade"
-                        placeholder="Digite sua Cidade"
-                    >
-
-                </div>
-
-
-                <!-- NÚMERO DO PEDIDO -->
-                <div class="campo-contato">
-
-                    <label for="pedido">
-                        N° Pedido
-                    </label>
-
-                    <input
-                        type="text"
-                        id="pedido"
-                        name="pedido"
-                        placeholder="Número do Seu Pedido"
-                    >
-
-                </div>
-
-            </div>
-
-
-            <!-- ASSUNTO -->
-            <div class="campo-contato campo-largo">
-
-                <label for="assunto">
-                    Selecione um Assunto
+            <!-- NOME -->
+            <div class="campo-contato">
+                <label for="nome">
+                    Nome
                 </label>
 
-                <select
-                    id="assunto"
-                    name="assunto"
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu Nome"
                 >
-
-                    <option value="">
-                        Escolha um assunto
-                    </option>
-
-                    <option value="pedido">
-                        Problema com pedido
-                    </option>
-
-                    <option value="duvida">
-                        Dúvida
-                    </option>
-
-                    <option value="elogio">
-                        Elogio
-                    </option>
-
-                    <option value="reclamacao">
-                        Reclamação
-                    </option>
-
-                    <option value="outro">
-                        Outro
-                    </option>
-
-                </select>
-
             </div>
 
 
-            <!-- CATEGORIA -->
-            <div class="categoria-contato">
-
-                Categoria:
-
-            </div>
-
-
-            <!-- MENSAGEM -->
-            <div class="campo-contato campo-mensagem">
-
-                <label for="mensagem">
-                    Mensagem
+            <!-- EMAIL -->
+            <div class="campo-contato">
+                <label for="email-contato">
+                    Email
                 </label>
 
-                <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    placeholder="Digite sua mensagem"
-                ></textarea>
-
+                <input
+                    type="email"
+                    id="email-contato"
+                    name="email"
+                    placeholder="Exemplo@exemplo.com.br"
+                >
             </div>
 
 
-            <!-- BOTÃO -->
-            <div class="area-botao">
+            <!-- TELEFONE -->
+            <div class="campo-contato">
+                <label for="telefone">
+                    Telefone Fixo
+                </label>
 
-                <button type="submit">
-                    enviar
-                </button>
-
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(99) 9999-9999"
+                >
             </div>
 
-        </form>
 
-    </main>
+            <!-- CELULAR -->
+            <div class="campo-contato">
+                <label for="celular">
+                    Celular
+                </label>
 
-</body>
-</html>
+                <input
+                    type="tel"
+                    id="celular"
+                    name="celular"
+                    placeholder="(99) 99999-9999"
+                >
+            </div>
+
+
+            <!-- CIDADE -->
+            <div class="campo-contato">
+                <label for="cidade">
+                    Cidade/UF
+                </label>
+
+                <input
+                    type="text"
+                    id="cidade"
+                    name="cidade"
+                    placeholder="Digite sua Cidade"
+                >
+            </div>
+
+
+            <!-- NÚMERO DO PEDIDO -->
+            <div class="campo-contato">
+                <label for="pedido">
+                    N° Pedido
+                </label>
+
+                <input
+                    type="text"
+                    id="pedido"
+                    name="pedido"
+                    placeholder="Número do Seu Pedido"
+                >
+            </div>
+
+        </div>
+
+
+        <!-- ASSUNTO -->
+        <div class="campo-contato campo-largo">
+
+            <label for="assunto">
+                Selecione um Assunto
+            </label>
+
+            <select id="assunto" name="assunto">
+
+                <option value="">
+                    Escolha um assunto
+                </option>
+
+                <option value="pedido">
+                    Problema com pedido
+                </option>
+
+                <option value="duvida">
+                    Dúvida
+                </option>
+
+                <option value="elogio">
+                    Elogio
+                </option>
+
+                <option value="reclamacao">
+                    Reclamação
+                </option>
+
+                <option value="outro">
+                    Outro
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- CATEGORIA -->
+        <div class="categoria-contato">
+            Categoria:
+        </div>
+
+
+        <!-- MENSAGEM -->
+        <div class="campo-contato campo-mensagem">
+
+            <label for="mensagem">
+                Mensagem
+            </label>
+
+            <textarea
+                id="mensagem"
+                name="mensagem"
+                placeholder="Digite sua mensagem"
+            ></textarea>
+
+        </div>
+
+
+        <!-- BOTÃO -->
+        <div class="area-botao">
+
+            <button type="submit" class="voltar-inicio">
+                enviar
+            </button>
+
+        </div>
+
+    </form>
+
+</main>
