@@ -1,24 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
-   
+
 <head>
- <meta charset="UTF-8">
- <title>revervas</title>
- <!-- Ligação com o CSS externo -->
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sakura Sushi</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- <!-- Menu de navegação -->
- <header>
- 
+
+    <!-- MENU -->
+    <header>
+
         <div class="logo">
             <div class="logo-icon">🌸</div>
- 
+
             <h1>
                 <span>Sakura</span> Sushi
             </h1>
         </div>
- 
+
         <nav>
             <ul>
                 <li><a href="index.html">Menu</a></li>
@@ -31,78 +36,288 @@
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
-  </header>
- <main>
- 
-    <br>
-<p>                           </p>
-<p>                           </p>
-<p>                           </p>
-<p>                           </p>
-    </br>
- 
-    <section class="Solicite uma reserva">
-    <h1 class="titulo-reservas">Solicite uma reserva</h1>
- 
- 
- <br>
-<p>                           </p>
-    </br>
- 
-    <div class="lado-esquerdoreservas">
- 
- <p>
-<h4>Escolha uma opção</h4> </p>
-   </div>
-   <br>
-<p>                           </p>
-    </br>
- 
- 
- 
-<div class="informacoes-reservas">
- 
-    <!-- ESQUERDA -->
-    <div class="coluna-reserva">
- 
-        <h3>Tamanho do grupo</h3>
- 
-        <h4></h4><a href="3pessoas.html">2 pessoas</a></h4>
-        <a href="3pessoas.html">3 pessoas</a>
-        <a href="3pessoas.html">4 pessoas</a>
-        <a href="3pessoas.html">5 pessoas</a>
- 
-    </div>
- 
- 
-    <!-- MEIO -->
-    <div class="coluna-reserva">
- 
-        <h3>Datas disponíveis</h3>
- 
-        <a href="#">16/11/2026</a>
-        <a href="#">23/11/2026</a>
-        <a href="#">24/11/2026</a>
-        <a href="#">30/11/2026</a>
-        <a href="#">03/12/2026</a>
- 
-    </div>
- 
- 
-    <!-- DIREITA -->
-    <div class="coluna-reserva">
- 
-        <h3>Horários</h3>
- 
-        <a href="#">14:00</a>
-        <a href="#">15:00</a>
-        <a href="#">15:30</a>
-        <a href="#">19:00</a>
-        <a href="#">20:00</a>
-        <a href="#">21:00</a>
-        <a href="#">21:30</a>
- 
-    </div>
- 
- 
- 
+
+    </header>
+
+
+    <main>
+        <!-- APRESENTAÇÃO -->
+        <section class="hero">
+            <div class="detalhe detalhe-1">✿</div>
+            <div class="detalhe detalhe-2">✿</div>
+
+            <span class="subtitulo">SAKURA SUSHI · EXPERIÊNCIA JAPONESA</span>
+
+            <h1>Uma mesa reservada,<br>
+                <span>um momento especial.</span>
+            </h1>
+
+            <p>
+                Prepare-se para viver uma experiência especial.
+                Escolha a data, o horário e reserve seu momento com a gente.
+            </p>
+
+            <div class="horario">
+                <span>◷</span>
+                Terça a domingo
+                <span class="separador">•</span>
+                18h às 23h30
+            </div>
+        </section>
+
+        <!-- ÁREA DE RESERVA -->
+        <section class="area-reserva">
+
+            <div class="informacoes">
+                <span class="etiqueta">SUA EXPERIÊNCIA COMEÇA AQUI</span>
+
+                <h2>Vamos preparar<br>seu lugar?</h2>
+
+                <p>
+                    Seja para um jantar especial, um encontro com amigos
+                    ou uma comemoração, queremos fazer parte desse momento.
+                </p>
+
+                <div class="beneficio">
+                    <span class="icone">✿</span>
+                    <div>
+                        <h3>Seu momento</h3>
+                        <p>Escolha o dia e o horário que combinam com você.</p>
+                    </div>
+                </div>
+
+                <div class="beneficio">
+                    <span class="icone">♧</span>
+                    <div>
+                        <h3>Mais conforto</h3>
+                        <p>Informe a quantidade de pessoas e sua preferência de mesa.</p>
+                    </div>
+                </div>
+
+                <div class="aviso-horario">
+                    <span>!</span>
+                    <p>
+                        Grupos com mais de 10 pessoas devem entrar em contato
+                        diretamente com nossa equipe.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cartao-formulario">
+                <div class="titulo-formulario">
+                    <div>
+                        <span class="etiqueta">RESERVA ONLINE</span>
+                        <h2>Reserve sua mesa</h2>
+                        <p>Preencha os dados para solicitar sua reserva.</p>
+                    </div>
+                    <span class="flor-decorativa">🌸</span>
+                </div>
+
+                <form id="form-reserva">
+
+                    <div class="grade-campos">
+
+                        <div class="campo">
+                            <label for="nome">Nome completo *</label>
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                placeholder="Como podemos te chamar?"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefone">Telefone ou WhatsApp *</label>
+                            <input
+                                type="tel"
+                                id="telefone"
+                                name="telefone"
+                                placeholder="(11) 90000-0000"
+                                autocomplete="tel"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="data">Data da reserva *</label>
+                            <input
+                                type="date"
+                                id="data"
+                                name="data"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="horario">Horário *</label>
+                            <select id="horario" name="horario" required>
+                                <option value="">Escolha um horário</option>
+                                <option value="18:00">18h00</option>
+                                <option value="18:30">18h30</option>
+                                <option value="19:00">19h00</option>
+                                <option value="19:30">19h30</option>
+                                <option value="20:00">20h00</option>
+                                <option value="20:30">20h30</option>
+                                <option value="21:00">21h00</option>
+                                <option value="21:30">21h30</option>
+                                <option value="22:00">22h00</option>
+                                <option value="22:30">22h30</option>
+                                <option value="23:00">23h00</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="pessoas">Quantidade de pessoas *</label>
+                            <select id="pessoas" name="pessoas" required>
+                                <option value="1">1 pessoa</option>
+                                <option value="2" selected>2 pessoas</option>
+                                <option value="3">3 pessoas</option>
+                                <option value="4">4 pessoas</option>
+                                <option value="5">5 pessoas</option>
+                                <option value="6">6 pessoas</option>
+                                <option value="7">7 pessoas</option>
+                                <option value="8">8 pessoas</option>
+                                <option value="9">9 pessoas</option>
+                                <option value="10">10 pessoas</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="local">Preferência de mesa *</label>
+                            <select id="local" name="local" required>
+                                <option value="Salão">Mesa no salão</option>
+                                <option value="Janela">Mesa próxima à janela</option>
+                                <option value="Indiferente">Sem preferência</option>
+                            </select>
+                        </div>
+
+                        <div class="campo campo-largo">
+                            <label for="observacoes">
+                                Observações <span>(opcional)</span>
+                            </label>
+                            <textarea
+                                id="observacoes"
+                                name="observacoes"
+                                rows="3"
+                                placeholder="Alergias, aniversário ou alguma preferência..."
+                            ></textarea>
+                        </div>
+
+                    </div>
+
+                    <p class="nota">
+                        * Campos obrigatórios
+                    </p>
+
+                    <button type="submit" class="botao">
+                        Confirmar solicitação
+                        <span>→</span>
+                    </button>
+
+                    <div
+                        id="aviso"
+                        class="aviso"
+                        role="status"
+                        aria-live="polite"
+                        hidden
+                    ></div>
+
+                    <p class="privacidade">
+                        Ao enviar, você solicita uma reserva.
+                        A confirmação definitiva depende do contato do restaurante.
+                    </p>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <a href="index.html" class="marca marca-rodape">
+            <span>🌸</span> Sakura Sushi
+        </a>
+        <p>Uma experiência japonesa feita para você.</p>
+        <span class="copyright">© 2026 Sakura Sushi · Todos os direitos reservados</span>
+    </footer>
+
+    <script>
+        const formulario = document.getElementById("form-reserva");
+        const campoData = document.getElementById("data");
+        const campoHorario = document.getElementById("horario");
+        const campoPessoas = document.getElementById("pessoas");
+        const aviso = document.getElementById("aviso");
+
+        // Impede a escolha de datas anteriores ao dia atual.
+        const agora = new Date();
+        const ano = agora.getFullYear();
+        const mes = String(agora.getMonth() + 1).padStart(2, "0");
+        const dia = String(agora.getDate()).padStart(2, "0");
+
+        campoData.min = `${ano}-${mes}-${dia}`;
+
+        formulario.addEventListener("submit", function(evento) {
+            evento.preventDefault();
+
+            aviso.hidden = true;
+            aviso.className = "aviso";
+
+            const nome = document.getElementById("nome").value.trim();
+            const telefone = document.getElementById("telefone").value.trim();
+            const data = campoData.value;
+            const horario = campoHorario.value;
+            const pessoas = Number(campoPessoas.value);
+
+            if (!nome || !telefone || !data || !horario) {
+                mostrarAviso("Preencha todos os campos obrigatórios.", "erro");
+                return;
+            }
+
+            const dataEscolhida = new Date(data + "T12:00:00");
+            const diaSemana = dataEscolhida.getDay();
+
+            if (diaSemana === 1) {
+                mostrarAviso(
+                    "Nosso restaurante fecha às segundas-feiras. Escolha outro dia!",
+                    "erro"
+                );
+                return;
+            }
+
+            if (data < campoData.min) {
+                mostrarAviso("Escolha uma data válida.", "erro");
+                return;
+            }
+
+            if (pessoas > 10) {
+                mostrarAviso(
+                    "Para grupos acima de 10 pessoas, entre em contato com nossa equipe.",
+                    "erro"
+                );
+                return;
+            }
+
+            const dataFormatada = dataEscolhida.toLocaleDateString("pt-BR");
+
+            mostrarAviso(
+                `Solicitação preenchida com sucesso, ${nome}! 🌸\n` +
+                `Data: ${dataFormatada} às ${horario}.\n` +
+                `Pessoas: ${pessoas}.\n` +
+                `Esta é uma demonstração: a reserva ainda precisa ser confirmada pelo restaurante.`,
+                "sucesso"
+            );
+        });
+
+        function mostrarAviso(mensagem, tipo) {
+            aviso.textContent = mensagem;
+            aviso.className = "aviso " + tipo;
+            aviso.hidden = false;
+            aviso.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+    </script>
+
+</body>
+</html>
