@@ -3896,3 +3896,647 @@ nav ul li a:hover {
         margin: 20px 0 0 auto;
     }
 }
+
+/* =====================================
+   SAKURA SUSHI — PÁGINA DE RESERVAS
+===================================== */
+
+:root {
+    --preto: #050505;
+    --preto-suave: #1b1515;
+    --vermelho: #7d0808;
+    --vermelho-claro: #a92200;
+    --rosa: #e7a5aa;
+    --creme: #fffaf6;
+    --texto: #ffffff;
+    --texto-suave: #f0dada;
+    --borda: #e9dfe0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--vermelho);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+/* ===== CABEÇALHO ===== */
+
+.topo {
+    width: 100%;
+    min-height: 120px;
+    padding: 20px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: var(--preto);
+    border-bottom: 2px solid var(--vermelho-claro);
+}
+
+.marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    color: #bd2929;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.marca strong {
+    color: #fff;
+}
+
+.logo-flor {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #a92200;
+    font-size: 26px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+}
+
+.menu a {
+    position: relative;
+    padding: 7px 0;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.25s ease;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: var(--rosa);
+}
+
+/* ===== APRESENTAÇÃO ===== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 65px 20px 55px;
+    text-align: center;
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(180, 50, 40, 0.25),
+            transparent 70%
+        ),
+        var(--vermelho);
+}
+
+.subtitulo,
+.etiqueta {
+    display: block;
+    color: var(--rosa);
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 22px 0 18px;
+    color: #fff;
+    font-size: clamp(34px, 4.5vw, 55px);
+    font-weight: normal;
+    line-height: 1.25;
+}
+
+.hero h1 span {
+    color: #f0b5b8;
+    font-style: italic;
+}
+
+.hero > p {
+    max-width: 590px;
+    margin: 0 auto;
+    color: #f8eaea;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.horario {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 27px;
+    padding: 11px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.12);
+    color: #fff;
+    font-size: 13px;
+}
+
+.horario > span:first-child {
+    color: var(--rosa);
+    font-size: 19px;
+}
+
+.separador {
+    color: var(--rosa);
+}
+
+.detalhe {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.07);
+    font-size: 150px;
+    pointer-events: none;
+}
+
+.detalhe-1 {
+    top: 10px;
+    left: 4%;
+    transform: rotate(-20deg);
+}
+
+.detalhe-2 {
+    right: 5%;
+    bottom: 0;
+    transform: rotate(20deg);
+}
+
+/* ===== ÁREA PRINCIPAL ===== */
+
+.area-reserva {
+    width: 100%;
+    padding: 35px max(5%, calc((100% - 1120px) / 2)) 85px;
+    display: grid;
+    grid-template-columns: 0.78fr 1.22fr;
+    align-items: start;
+    gap: 55px;
+    background: var(--vermelho);
+}
+
+/* ===== INFORMAÇÕES LATERAIS ===== */
+
+.informacoes {
+    padding-top: 40px;
+}
+
+.informacoes h2 {
+    margin: 20px 0;
+    color: #fff;
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+.informacoes > p {
+    color: var(--texto-suave);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.beneficio {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    margin-top: 30px;
+}
+
+.icone {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.12);
+    color: #f0b5b8;
+    font-size: 24px;
+}
+
+.beneficio h3 {
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.beneficio p {
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.aviso-horario {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 32px;
+    padding: 17px;
+    border-left: 3px solid var(--rosa);
+    background: rgba(0, 0, 0, 0.13);
+}
+
+.aviso-horario > span {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--rosa);
+    border-radius: 50%;
+    color: var(--rosa);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.aviso-horario p {
+    color: #f4e3e3;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ===== CARTÃO DO FORMULÁRIO ===== */
+
+.cartao-formulario {
+    min-width: 0;
+    padding: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    background: var(--creme);
+    color: #271d1d;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-formulario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 27px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #eadfdf;
+}
+
+.titulo-formulario .etiqueta {
+    color: var(--vermelho);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.titulo-formulario h2 {
+    margin-top: 8px;
+    color: #241818;
+    font-size: 27px;
+    line-height: 1.3;
+}
+
+.titulo-formulario p {
+    margin-top: 7px;
+    color: #786969;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.flor-decorativa {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #f5e5e5;
+    font-size: 28px;
+}
+
+/* ===== CAMPOS ===== */
+
+.grade-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.campo label {
+    color: #332424;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.campo label span {
+    color: #8b7777;
+    font-weight: normal;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 47px;
+    padding: 12px;
+    border: 1px solid #dfd1d1;
+    border-radius: 7px;
+    outline: none;
+    background: #fff;
+    color: #302424;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #a79797;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--vermelho-claro);
+    box-shadow: 0 0 0 3px rgba(181, 40, 49, 0.12);
+}
+
+.campo textarea {
+    min-height: 100px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.campo-largo {
+    grid-column: 1 / -1;
+}
+
+/* ===== BOTÃO ===== */
+
+.nota {
+    margin-top: 18px;
+    color: #817171;
+    font-size: 11px;
+}
+
+.botao {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 17px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: none;
+    border-radius: 7px;
+    background: var(--vermelho);
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.botao span {
+    font-size: 20px;
+    transition: transform 0.25s;
+}
+
+.botao:hover {
+    background: var(--vermelho-claro);
+    box-shadow: 0 7px 18px rgba(139, 16, 24, 0.2);
+    transform: translateY(-2px);
+}
+
+.botao:hover span {
+    transform: translateX(4px);
+}
+
+.botao:focus-visible {
+    outline: 3px solid var(--rosa);
+    outline-offset: 3px;
+}
+
+.privacidade {
+    margin-top: 16px;
+    color: #887979;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* ===== AVISOS ===== */
+
+.aviso {
+    margin-top: 18px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.8;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+.aviso[hidden] {
+    display: none;
+}
+
+.aviso.sucesso {
+    border: 1px solid #b8d8bf;
+    background: #edf7ef;
+    color: #245a32;
+}
+
+.aviso.erro {
+    border: 1px solid #e7b8b8;
+    background: #fff0f0;
+    color: #8b1018;
+}
+
+/* ===== RODAPÉ ===== */
+
+.rodape {
+    padding: 36px 20px 25px;
+    border-top: 2px solid var(--vermelho-claro);
+    background: var(--preto);
+    text-align: center;
+}
+
+.marca-rodape {
+    justify-content: center;
+    color: #bd2929;
+    font-size: 23px;
+}
+
+.rodape > p {
+    margin-top: 12px;
+    color: #e0d4d4;
+    font-size: 13px;
+}
+
+.copyright {
+    display: block;
+    margin-top: 22px;
+    color: #958585;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+/* ===== TABLETS ===== */
+
+@media (max-width: 1050px) {
+    .topo {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .area-reserva {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .informacoes {
+        padding-top: 10px;
+    }
+
+    .informacoes h2 br {
+        display: none;
+    }
+
+    .beneficio {
+        margin-top: 20px;
+    }
+
+    .cartao-formulario {
+        width: 100%;
+    }
+}
+
+/* ===== CELULARES ===== */
+
+@media (max-width: 600px) {
+    .topo {
+        padding: 20px 15px;
+    }
+
+    .marca {
+        font-size: 25px;
+    }
+
+    .logo-flor {
+        width: 45px;
+        height: 45px;
+        font-size: 23px;
+    }
+
+    .menu {
+        gap: 8px 15px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 48px 20px 40px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero > p {
+        font-size: 14px;
+    }
+
+    .horario {
+        gap: 8px;
+        padding: 10px 13px;
+        font-size: 11px;
+    }
+
+    .detalhe {
+        font-size: 90px;
+    }
+
+    .area-reserva {
+        padding: 20px 4% 50px;
+    }
+
+    .informacoes h2 {
+        font-size: 32px;
+    }
+
+    .cartao-formulario {
+        padding: 23px 18px;
+        border-radius: 12px;
+    }
+
+    .titulo-formulario h2 {
+        font-size: 23px;
+    }
+
+    .flor-decorativa {
+        width: 43px;
+        height: 43px;
+        font-size: 23px;
+    }
+
+    .grade-campos {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .campo-largo {
+        grid-column: auto;
+    }
+}
+
+/* ===== ACESSIBILIDADE ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
